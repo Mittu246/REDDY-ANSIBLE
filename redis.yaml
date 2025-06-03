@@ -1,4 +1,4 @@
-- nmae: configuring redis
+- name: configuring redis
   become: true
   hosts: redis
   tasks: 
