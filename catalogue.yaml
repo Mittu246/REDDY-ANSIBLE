@@ -54,4 +54,12 @@
       name: catalogue
       state: started
       enabled: yes
+  
+  - name: copying mongo repo
+    ansible.builtin.copy:
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo
+    
+  - name: install mongo client
+    ansible.builtin.command: dnf install mongodb-mongosh -y
     
